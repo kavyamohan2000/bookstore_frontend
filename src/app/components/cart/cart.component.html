@@ -1,0 +1,22 @@
+<h2>Cart</h2>
+
+
+<div *ngFor="let book of books">
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{book.Title}}</h5>
+          <p class="card-text">ISBN: {{book.ISBN}}</p>
+          <p class="card-text">Year: {{book.Year}}</p>
+          <p class="card-text">Price: {{book.Price}}</p>
+          <a routerLink="/wishlist" class="btn btn-warning">WishList</a>
+          <br>
+          <a routerLink="/cart" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+<button routerLink="/order" (click)="OnClickHandler()" class="btn btn-warning btn-block">Order Items</button>

@@ -1,0 +1,12 @@
+<div class="row">
+<div *ngFor="let cat of categories" class="col-lg-3"> 
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{cat.CategoryName}}</h5>
+      <p class="card-text">{{cat.Description}}</p>
+      <button (click)="OnClick(cat.CategoryId)" class="btn btn-primary">See Books</button>
+    </div>
+  </div>
+</div>
+</div> 
