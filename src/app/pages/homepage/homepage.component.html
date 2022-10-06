@@ -2,6 +2,21 @@
 <app-header>
 
 </app-header>
+<div *ngIf="admin">
+    <button routerLink="/admin" class="btn btn-danger">Go to admin page</button>
+    
+    <br>
+</div>
+<div style="display:inline-block">
+    <button routerLink="/search" class="btn btn-danger">Search books</button>
+    
+    <br>
+</div>
+<br>
+<br>
+
+
+
 <app-categories>
     
 </app-categories>

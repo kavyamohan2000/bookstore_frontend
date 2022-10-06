@@ -17,6 +17,9 @@ import { OrderComponent } from './components/order/order.component';
 import { CartComponent } from './components/cart/cart.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AdminComponent } from './components/admin/admin.component';
+import { SearchComponent } from './components/search/search.component';
+import { BookbynameComponent } from './components/bookbyname/bookbyname.component';
 
 
 
@@ -35,7 +38,10 @@ import { AppRoutingModule } from './app-routing.module';
     SidebarComponent,
     OrderComponent,
     CartComponent,
-    WishlistComponent
+    WishlistComponent,
+    AdminComponent,
+    SearchComponent,
+    BookbynameComponent
   
   
     

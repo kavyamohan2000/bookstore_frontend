@@ -1,0 +1,17 @@
+<app-navbar>
+  
+</app-navbar>
+<div *ngFor="let book of books">
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{book.Title}}</h5>
+      <p class="card-text">ISBN: {{book.ISBN}}</p>
+      <p class="card-text">Year: {{book.Year}}</p>
+      <p class="card-text">Price: {{book.Price}}</p>
+      <button routerLink="/wishlist"  class="btn btn-warning">WishList</button>
+      <br>
+      <button routerLink="/cart"  class="btn btn-primary">Add to Cart</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<h1 class="text-center">Welcome Administrator</h1>
+<br>
+<br>
+<br>
+<div *ngIf="admin">
+    <button (click)="OnClick()" class="btn btn-danger btn-block">Add book</button>
+    <br>
+    <br>
+    <br>
+    <form [formGroup]="bookIdform" (submit)="OnClickHandler()">
+    <div  class="form-group">
+        <label >Enter Book Id of Book to be removed</label>
+        <input class="form-control" formControlName="bookid" type="text" ></div>
+    
+    <input class="btn btn-block btn-danger"type="submit" value="Remove Book">
+    </form>
+    <br>
+    <br>
+    <br>
+     <form>
+    <div class="form-group"><input class="form-control" formControlName="" type="text"  value="Enter User Id "></div>
+    </form>
+    <button class="btn btn-danger btn-block">Activate user</button>
+    <br>
+    <br>
+    <br>
+    <form>
+        <div class="form-group"><input type="text"  value="Enter User Id "></div>
+        </form>
+    <button class="btn btn-danger btn-block">Activate user</button>
+</div>
+<div *ngIf="!admin">
+    Page accessible only to admin.
+</div>
+
+

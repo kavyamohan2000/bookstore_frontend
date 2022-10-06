@@ -13,9 +13,19 @@ export class AuthserviceService {
   register(userModel:User):Observable<any>{return this.http.post<any>(`${this.base_url}register`,userModel)}
 
   login(data:any):Observable<any>{return this.http.get<any>(`${this.base_url}userlogin?id=${data.userid}&pwd=${data.password}`)}
+  getuser(id:any):Observable<any>{return this.http.get<any>(`${this.base_url}user?id=${id}`)}
 
   checkToken():boolean{
     if(localStorage.getItem('token')){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
+  checkAdmin():boolean{
+    if((JSON.parse(localStorage.getItem('user')!).Type)=='admin'){
       return true;
     }
     else{
