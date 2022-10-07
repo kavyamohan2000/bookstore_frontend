@@ -27,12 +27,12 @@ export class LoginComponent implements OnInit {
   }
 
   OnSubmitHandler(){
-    this.auth.login(this.loginForm.value).subscribe((response)=>{console.log(response)
+    this.auth.getuser(this.loginForm.value.userid).subscribe((response)=>{console.log(response)
                                                                   if(response==null){
-                                                                    this.loginResponse="Incorrect user name or password";
+                                                                    this.loginResponse="Incorrect user name";
                                                                     this.loginClass="alert-danger";
                                                                   }
-                                                                else{
+                                                                else if(response.Password==this.loginForm.value.password){
                                                                   this.loginResponse="Logged In successfully."
                                                                   this.loginClass="alert-success";
                                                                   localStorage.setItem('token',response);
@@ -40,7 +40,11 @@ export class LoginComponent implements OnInit {
                                                                 localStorage.setItem('user',JSON.stringify(response));
                                                                 this.router.navigateByUrl('home');
                                                                 }
-                                                                
+                                                                else{
+                                                                  this.loginResponse="Incorrect password";
+                                                                    this.loginClass="alert-danger";
+
+                                                                }
                                                                 
             
                                                               },

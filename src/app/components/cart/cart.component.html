@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <h2>Cart</h2>
 
 
@@ -9,7 +10,7 @@
           <p class="card-text">ISBN: {{book.ISBN}}</p>
           <p class="card-text">Year: {{book.Year}}</p>
           <p class="card-text">Price: {{book.Price}}</p>
-          <a class="btn btn-danger">Remove from Cart</a>
+          <button (click)="OnClick()" class="btn btn-danger">Remove from Cart</button>
           <br>
           
         </div>
@@ -20,4 +21,4 @@
     <br>
     <br>
 
-<button routerLink="/order" (click)="OnClickHandler()" class="btn btn-warning btn-block">Order Items</button>
+<button  (click)="OnClickHandler()" class="btn btn-warning btn-block">Order Items</button>

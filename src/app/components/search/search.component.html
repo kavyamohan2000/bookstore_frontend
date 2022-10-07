@@ -1,10 +1,53 @@
+<app-navbar></app-navbar>
 <h1>Search Books</h1>
+<br>
+<br>
 <h4>Search by Name</h4>
 <form [formGroup]="byName" (submit)="OnSubmitName()">
-    <div class="form-control" >
+    <div class="form-group" >
         <label>Enter Name</label>
-        <input formControlName="name" class="form-control" type="text">
-        <input type="submit" value="Search By Name" class="btn btn-primary">
+        <input formControlName="bookname" class="form-control" type="text">
     </div>
+        <input type="submit" value="Search By Name" class="btn btn-primary">
+    
 </form>
+<br>
+<br>
+<br>
+<h4>Search by ISBN</h4>
+<form [formGroup]="byISBN" (submit)="OnSubmitISBN()">
+    <div class="form-group" >
+        <label>Enter ISBN</label>
+        <input formControlName="isbn" class="form-control" type="text">
+    </div>
+        <input type="submit" value="Search By ISBN" class="btn btn-primary">
+    
+</form>
+<br>
+<br>
+<br>
+<h4>Search by Author</h4>
+<form [formGroup]="byAuthor" (submit)="OnSubmitAuthor()">
+    <div class="form-group" >
+        <label>Enter Author name</label>
+        <input formControlName="author" class="form-control" type="text">
+    </div>
+        <input type="submit" value="Search By Author" class="btn btn-primary">
+    
+</form>
+<br>
+<br>
+<br>
+<h4>Search by Category</h4>
+<form [formGroup]="byCategory" (submit)="OnSubmitCategory()">
+    <div class="form-group" >
+        <label>Enter Category name</label>
+        <input formControlName="catname" class="form-control" type="text">
+    </div>
+        <input type="submit" value="Search By Category" class="btn btn-primary">
+    
+</form>
+
+
+
 

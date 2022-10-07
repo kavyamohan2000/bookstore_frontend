@@ -37,4 +37,8 @@ export class CartComponent implements OnInit {
     )
   }
 
+  OnClick(){
+    
+  }
+
 }

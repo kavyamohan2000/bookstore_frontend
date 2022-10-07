@@ -19,6 +19,9 @@ export class BookService {
   getBookByName(title:any):Observable<any>{
     return this.http.get(`${this.base_url}book?title=${title}`);
   }
+  getBookByISBN(isbn:any):Observable<any>{
+    return this.http.get(`${this.base_url}book?ISBN=${isbn}`);
+  }
   getUsersCart(userid:any):Observable<any>{
     return this.http.get(`${this.base_url}user?userid=${userid}`);
   }
@@ -28,6 +31,7 @@ export class BookService {
   AddToCart(userid:any,bookid:any):Observable<any>{
     return this.http.post(`${this.base_url}user?userid=${userid}&bookid=${bookid}`,userid,bookid);
   }
+
   AddToWishList(uid:any,bid:any):Observable<any>{
     return this.http.post(`${this.base_url}user?uid=${uid}&bid=${bid}`,uid,bid);
   }

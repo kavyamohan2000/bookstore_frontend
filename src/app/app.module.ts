@@ -20,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AdminComponent } from './components/admin/admin.component';
 import { SearchComponent } from './components/search/search.component';
 import { BookbynameComponent } from './components/bookbyname/bookbyname.component';
+import { BookbyisbnComponent } from './components/bookbyisbn/bookbyisbn.component';
 
 
 
@@ -41,7 +42,8 @@ import { BookbynameComponent } from './components/bookbyname/bookbyname.componen
     WishlistComponent,
     AdminComponent,
     SearchComponent,
-    BookbynameComponent
+    BookbynameComponent,
+    BookbyisbnComponent
   
   
     

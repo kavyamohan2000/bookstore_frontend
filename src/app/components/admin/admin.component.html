@@ -3,7 +3,50 @@
 <br>
 <br>
 <div *ngIf="admin">
-    <button (click)="OnClick()" class="btn btn-danger btn-block">Add book</button>
+    <form [formGroup]="newbook" (submit)="OnSubmit()">
+        <div class="form-group">
+            <label>Book Id</label>
+            <input class="form-control" formControlName="bookid" type="text">
+        </div>
+        <div class="form-group">
+            <label>Category Id</label>
+            <input class="form-control" formControlName="catid" type="number">
+        </div>
+        <div class="form-group">
+            <label>Title</label>
+            <input class="form-control" formControlName="title" type="text">
+        </div>
+        <div class="form-group">
+            <label>ISBN</label>
+            <input class="form-control" formControlName="isbn" type="text">
+        </div>
+        <div class="form-group">
+            <label>Year</label>
+            <input class="form-control" formControlName="year" type="text">
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <input class="form-control" formControlName="price" type="text">
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input class="form-control" formControlName="description" type="text">
+        </div>
+        <div class="form-group">
+            <label>Position</label>
+            <input class="form-control" formControlName="position" type="text">
+        </div>
+        <div class="form-group">
+            <label>Status</label>
+            <input class="form-control" formControlName="status" type="text">
+        </div>
+        <div class="form-group">
+            <label>Image</label>
+            <input class="form-control" formControlName="image" type="text">
+        </div>
+        <input type="submit" value="Add book" class="btn btn-danger btn-block">
+    </form>
+   
     <br>
     <br>
     <br>
@@ -27,7 +70,7 @@
     <form>
         <div class="form-group"><input type="text"  value="Enter User Id "></div>
         </form>
-    <button class="btn btn-danger btn-block">Activate user</button>
+    <button class="btn btn-danger btn-block">Deactivate user</button>
 </div>
 <div *ngIf="!admin">
     Page accessible only to admin.
