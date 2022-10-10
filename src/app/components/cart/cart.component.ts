@@ -37,8 +37,10 @@ export class CartComponent implements OnInit {
     )
   }
 
-  OnClick(){
-    
+  OnClick(bookid:any){
+    this.bookService.RemoveFromCart(this.userid,bookid).subscribe((response)=>{
+      console.log(response);
+    })
   }
 
 }

@@ -1,9 +1,10 @@
 <app-navbar></app-navbar>
+<div class="container">
 <h3>WishList</h3>
-
-<div *ngFor="let book of books">
+<div class="row">
+<div *ngFor="let book of books" class="col-lg-4">
     <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="https://covers.openlibrary.org/b/isbn/{{book.Image}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{book.Title}}</h5>
           <p class="card-text">ISBN: {{book.ISBN}}</p>
@@ -13,4 +14,9 @@
         </div>
       </div>
     </div>
-    <a routerLink="/cart" class="btn btn-warning">Go to cart</a>
+  </div>
+ <br>
+ <br>
+
+    <a routerLink="/cart" class="btn btn-primary btn-block">Go to cart</a>
+  </div>

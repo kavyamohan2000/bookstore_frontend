@@ -1,7 +1,9 @@
 .container{
     display: inline-block;
+    background-color: rgb(238, 165, 189);
     
 }
-.btn{
-    display:inline-flex;
+.btn-primary{
+    background-color:blueviolet;
+    
 }

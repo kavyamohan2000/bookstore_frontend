@@ -21,6 +21,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { SearchComponent } from './components/search/search.component';
 import { BookbynameComponent } from './components/bookbyname/bookbyname.component';
 import { BookbyisbnComponent } from './components/bookbyisbn/bookbyisbn.component';
+import { BookbycategoryComponent } from './components/bookbycategory/bookbycategory.component';
+
 
 
 
@@ -43,7 +45,8 @@ import { BookbyisbnComponent } from './components/bookbyisbn/bookbyisbn.componen
     AdminComponent,
     SearchComponent,
     BookbynameComponent,
-    BookbyisbnComponent
+    BookbyisbnComponent,
+    BookbycategoryComponent
   
   
     

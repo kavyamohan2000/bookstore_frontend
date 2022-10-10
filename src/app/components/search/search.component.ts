@@ -37,6 +37,6 @@ export class SearchComponent implements OnInit {
   }
 
   OnSubmitCategory(){
-    
+    this.router.navigate(['bookbycategory',this.byCategory.value.catname]);
   }
 }

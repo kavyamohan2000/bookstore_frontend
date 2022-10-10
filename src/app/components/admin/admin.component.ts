@@ -19,7 +19,7 @@ export class AdminComponent implements OnInit {
     bookid: new FormControl()
 });
   newbook=this.fb.group({bookid:[null,[Validators.required]],
-                         catid:[null,[Validators.required]],
+                         categoryid:[null,[Validators.required]],
                          title:[null,[Validators.required]],
                          isbn:[null,[Validators.required]],
                          year:[null,[Validators.required]],
@@ -28,6 +28,9 @@ export class AdminComponent implements OnInit {
                          position:[null,[Validators.required]],
                          status:[null,[Validators.required]],
                          image:[null,[Validators.required]]})
+
+  activateuser=this.fb.group({userid:[null,[Validators.required]]});
+  deactivateuser=this.fb.group({userid:[null,[Validators.required]]});
   ngOnInit(): void {
   }
   
@@ -43,6 +46,16 @@ export class AdminComponent implements OnInit {
     this.bookService.AddNewBook(this.newbook.value).subscribe((response)=>{
       
       console.log(response);
+    })
+  }
+  OnClickActivate(){
+    this.bookService.ActivateUser(this.activateuser.value.userid).subscribe((response)=>{
+      console.log(this.activateuser.value.userid);
+    })
+  }
+  OnClickDeactivate(){
+    this.bookService.DeactivateUser(this.deactivateuser.value.userid).subscribe((response)=>{
+      console.log(this.deactivateuser.value.userid);
     })
   }
 }

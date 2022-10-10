@@ -1,0 +1,20 @@
+.card{
+    margin-left: 20px;
+    width: 380px;
+    border-color: black;
+    margin-top: 20px;;
+    background-color: black;
+    color: antiquewhite;
+}
+img{
+    height: 400px;
+    width:286px;
+}
+.btn-primary{
+    background-color: blueviolet;
+}
+.container{
+    display: inline-block;
+    background-color: rgb(238, 165, 189);
+    
+}

@@ -53,4 +53,16 @@ export class BookService {
   RemoveBook(id:any):Observable<any>{
     return this.http.delete(`${this.base_url}book?id=${id}`);
   }
+  ActivateUser(userid:any):Observable<any>{
+    return this.http.put(`${this.base_url}admin?id=${userid}`,userid);
+  }
+  DeactivateUser(userid:any):Observable<any>{
+    return this.http.put(`${this.base_url}admin?did=${userid}`,userid);
+  }
+  GetBookByCategoryName(catname:any):Observable<any>{
+    return this.http.get(`${this.base_url}book?catname=${catname}`);
+  }
+  RemoveFromCart(uid:any,bid:any):Observable<any>{
+    return this.http.delete(`${this.base_url}user?uid=${uid}&bid=${bid}`);
+  }
 }

@@ -1,4 +1,6 @@
-<div class="container">
+<h1 class="text-primary">TheBookStore</h1>
+<body>
+   
     <div class="row">
         <div class="col-lg-3">
         </div>
@@ -7,7 +9,7 @@
                 <div class="{{ 'alert '+ loginClass  }}" role="alert">
                     {{ loginResponse }}
                   </div>
-                <h2>Login
+                <h2 class="text-center">Login
                 </h2>
                 <hr>
                 <form [formGroup]="loginForm" (submit)="OnSubmitHandler()">
@@ -26,7 +28,7 @@
                             <small class="text-danger" *ngIf="password?.errors?.['minlength']">The password should atleast be of 6 characters.</small>
                         </div>
                     </div>
-                    <input type="submit" value="Login" class="btn btn-primary">
+                    <input type="submit" value="Login" class="btn btn-pink btn-block test-light">
                 </form>
                 <br>
                 <p class="text-center">
@@ -37,4 +39,5 @@
         </div>
         <div class="col-lg-3"></div>
     </div>
-</div>
+
+</body>

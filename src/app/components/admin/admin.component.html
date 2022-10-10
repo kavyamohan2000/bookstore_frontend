@@ -10,7 +10,7 @@
         </div>
         <div class="form-group">
             <label>Category Id</label>
-            <input class="form-control" formControlName="catid" type="number">
+            <input class="form-control" formControlName="categoryid" type="number">
         </div>
         <div class="form-group">
             <label>Title</label>
@@ -60,18 +60,22 @@
     <br>
     <br>
     <br>
-     <form>
-    <div class="form-group"><input class="form-control" formControlName="" type="text"  value="Enter User Id "></div>
+     <form [formGroup]="activateuser" (submit)="OnClickActivate()">
+    <label>Enter User Id</label>
+    <div class="form-group"><input class="form-control" formControlName="userid" type="text"  value=""></div>
+    <input type="submit" value="Activate User" class="btn btn-danger btn-block">
     </form>
-    <button class="btn btn-danger btn-block">Activate user</button>
+    
     <br>
     <br>
     <br>
-    <form>
-        <div class="form-group"><input type="text"  value="Enter User Id "></div>
+    <form [formGroup]="deactivateuser" (submit)="OnClickDeactivate()">
+        <label>Enter User Id</label>
+        <div class="form-group"><input class="form-control" formControlName="userid" type="text"  value=""></div>
+        <input type="submit" value="Deactivate User" class="btn btn-danger btn-block">
         </form>
-    <button class="btn btn-danger btn-block">Deactivate user</button>
 </div>
+
 <div *ngIf="!admin">
     Page accessible only to admin.
 </div>

@@ -14,6 +14,7 @@ import { SearchComponent } from './components/search/search.component';
 import { BookbynameComponent } from './components/bookbyname/bookbyname.component';
 import { Book } from './models/book.model';
 import { BookbyisbnComponent } from './components/bookbyisbn/bookbyisbn.component';
+import { BookbycategoryComponent } from './components/bookbycategory/bookbycategory.component';
 
 const routes:Routes=[
     {path:'home',component:HomepageComponent,canActivate:[AuthGuard]},
@@ -26,7 +27,8 @@ const routes:Routes=[
     {path:'admin',component:AdminComponent,canActivate:[AdminGuard]},
     {path:'search',component:SearchComponent,canActivate:[AuthGuard]},
     {path:'bookbyname/:title',component:BookbynameComponent,canActivate:[AuthGuard]},
-    {path:'bookbyisbn/:isbn',component:BookbyisbnComponent,canActivate:[AuthGuard]}
+    {path:'bookbyisbn/:isbn',component:BookbyisbnComponent,canActivate:[AuthGuard]},
+    {path:'bookbycategory/:catname',component:BookbycategoryComponent,canActivate:[AuthGuard]}
 
 ]
 @NgModule({

@@ -1,8 +1,12 @@
+
+<h1 class="text-primary">TheBookStore</h1>
 <div class="container">
     <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
-            <h2>Register</h2>
+            <div class="wrapper">
+
+            <h2 class="text-center">Register</h2>
             
             <hr>
             <form #registerForm="ngForm" (submit)="OnFormSubmit()">
@@ -23,12 +27,13 @@
                     <label for="">Enter Address</label>
                     <input #address="ngModel" type="text" name="address" class="form-control" [(ngModel)]="userModel.Address">
                 </div>
-                <input type="submit" value="Register" class="btn-primary">
+                <input type="submit" value="Register" class="btn btn-pink btn-block">
                 <p class="text-center">
                     <a routerLink="/login" >Already registered?Click here</a>
                 </p>
             </form>
         </div>
+    </div>
         <div class="col-lg-3"></div>
     </div>
 </div>
